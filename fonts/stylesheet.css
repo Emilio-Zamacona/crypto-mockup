@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'FractulAlt';
+    src: url('FractulAlt-ExtraBold.eot');
+    src: url('FractulAlt-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('FractulAlt-ExtraBold.woff2') format('woff2'),
+        url('FractulAlt-ExtraBold.woff') format('woff'),
+        url('FractulAlt-ExtraBold.ttf') format('truetype'),
+        url('FractulAlt-ExtraBold.svg#FractulAlt-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('Fractul-Regular.eot');
+    src: url('Fractul-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Fractul-Regular.woff2') format('woff2'),
+        url('Fractul-Regular.woff') format('woff'),
+        url('Fractul-Regular.ttf') format('truetype'),
+        url('Fractul-Regular.svg#Fractul-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

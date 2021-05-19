@@ -1,0 +1,208 @@
+// Imports
+@import 'fonts';
+@import 'abstracts';
+@import 'resets';
+
+// Elements
+.logo {
+  display: flex;
+  align-items: center;
+  &__img {
+    width: 50px;
+    padding-right: 12px;
+  }
+  &__text {
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 27px;
+  }
+}
+.button {
+  font-size: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 15px 40px;
+  font-weight: 600;
+
+  &.--primary {
+    background: $gradient-2;
+    border: 1px solid $orange;
+  }
+  &.--outlined {
+    border: 2px solid $black;
+  }
+}
+.play {
+  display: flex;
+  align-items: center;
+  &__icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid $black;
+    border-right-color: transparent;
+    background-color: $orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    // Flechita del Play
+    &::after {
+      content: '';
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 10px solid $black;
+      position: relative;
+      left: 2px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+// Components
+.menu {
+  display: flex;
+  align-items: center;
+  margin: 0 -22px;
+
+  &__item {
+    padding: 0 22px;
+  }
+  &__link {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &.--narrow {
+    margin: 0 -11px;
+    .menu__item {
+      padding: 0 11px;
+    }
+  }
+}
+
+// Layout
+.container {
+  $padding: 20px;
+  padding: 0 $padding;
+  max-width: 1160px - ($padding * 2);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 44px 0 120px;
+
+  &__title {
+  }
+  &__nav {
+  }
+  &__sign {
+  }
+}
+
+.main {
+  position: relative;
+  margin-bottom: 115px;
+
+  &__background {
+    position: absolute;
+    top: -10%;
+    right: calc(50% - 50vw);
+    width: 45vw;
+  }
+
+  &__content {
+    margin-bottom: 150px;
+  }
+  &__title {
+    font-size: 68px;
+    font-family: Fractul;
+    font-weight: 500;
+    margin-bottom: 27px;
+  }
+  &__circle {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: -25%;
+      bottom: -30%;
+      left: 0;
+      right: 0;
+      background-image: url('../images/circle.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+  &__text {
+    margin-bottom: 60px;
+    font-size: 19px;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.crypto {
+  display: flex;
+  align-items: center;
+  border: 2px solid $black;
+  border-bottom: none;
+  border-radius: 8px 8px 0px 0px;
+  &__item {
+    cursor: pointer;
+    $offset: 45px;
+    padding: (60px + $offset) 40px 60px;
+    width: 100%;
+    margin-top: -$offset;
+    border-radius: 6px 6px 0px 0px;
+    border: 2px solid transparent;
+    position: relative;
+    &:first-child {
+      margin-left: -2px;
+    }
+    &:last-child {
+      margin-right: -2px;
+    }
+    + .crypto__item:not(.--active)::after {
+      content: '';
+      position: absolute;
+      top: calc(#{$offset} + 25%);
+      bottom: 25%;
+      left: -1px;
+      border-left: 2px solid rgba(#000, 0.2);
+    }
+    &.--active {
+      background: $gradient-2;
+      border-color: $black;
+      border-bottom: none;
+      + .crypto__item::after {
+        display: none;
+      }
+    }
+  }
+  &__name {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  &__price {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}

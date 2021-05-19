@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+//prettier-ignore
+@font-face {
+  font-family: 'Fractul';
+  src: url('../fonts/FractulAlt-ExtraBold.eot');
+  src: url('../fonts/FractulAlt-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FractulAlt-ExtraBold.woff2') format('woff2'),
+      url('../fonts/FractulAlt-ExtraBold.woff') format('woff'),
+      url('../fonts/FractulAlt-ExtraBold.ttf') format('truetype'),
+      url('../fonts/FractulAlt-ExtraBold.svg#FractulAlt-ExtraBold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+//prettier-ignore
+@font-face {
+  font-family: 'Fractul';
+  src: url('../fonts/Fractul-Regular.eot');
+  src: url('../fonts/Fractul-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Fractul-Regular.woff2') format('woff2'),
+      url('../fonts/Fractul-Regular.woff') format('woff'),
+      url('../fonts/Fractul-Regular.ttf') format('truetype'),
+      url('../fonts/Fractul-Regular.svg#Fractul-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
